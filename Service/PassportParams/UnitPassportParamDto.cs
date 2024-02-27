@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Service.PassportParams
+{
+    public class UnitPassportParamDto
+    {
+        public Dictionary<long, string> Parameters { get; set; }
+    }
+}
