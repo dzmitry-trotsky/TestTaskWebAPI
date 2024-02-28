@@ -12,10 +12,18 @@ builder.Services.ConfigureSqlContext(builder.Configuration);
 
 builder.Services.ConfigureReposiories();
 builder.Services.ConfigureServices();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+app.UseSwagger();
+
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Test API");
+});
 
 app.UseHttpsRedirection();
 
